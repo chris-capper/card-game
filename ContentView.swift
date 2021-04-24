@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  uitest
+//  war-challenge
 //
-//  Created by Chris Capper on 4/22/21.
+//  Created by Chris Capper on 4/24/21.
 //
 
 import SwiftUI
@@ -10,28 +10,53 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack() {
+        ZStack {
             
-            Spacer()
+            Image("background")
+                .ignoresSafeArea()
             
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            
-            Spacer()
-            
-            HStack() {
-                
+            VStack {
                 Spacer()
-                Text("Hello!")
+                Image("logo")
                 Spacer()
-                Text("World!")
+                HStack {
+                    Spacer()
+                    Image("card2")
+                    Spacer()
+                    Image("card3")
+                    Spacer()
+                }
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .padding(.bottom, 10.0 )
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                }
                 Spacer()
             }
             
-            Spacer()
-            
         }
+        
     }
 }
 
